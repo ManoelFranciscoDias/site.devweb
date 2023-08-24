@@ -1,0 +1,285 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2? family= Bebas+Neue & display=swap');
+
+
+
+:root {
+    --cor1: #EFD5E9;
+    --cor2: #E588D6;
+    --cor3: #E992F0;
+    --cor4: #000000;
+    --cor5: #e7e7e7;
+    --cor6: #cccccc;
+    --font1: 'Exo 2', 'arial';
+
+}
+
+body {
+  background-image: url(img/dcb5359f7f44de44f7aac5b6a7e47922.gif);
+}
+
+* {
+  font-family: var(--font1);
+}
+
+body,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1, a {
+  color: var(--cor4);
+  text-decoration: none;
+  font-family: var(--font1);
+}
+
+a:hover {
+  background: var(--cor6);
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--cor5);
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: var(--cor5);
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid var(--cor4);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+.logo {
+  height: 60px;
+  width: 70px;
+}
+
+.img {
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px 0px #504f4f;
+  
+}
+
+.conteiner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.conteiner div {
+  flex: 1 1 300px;
+  margin: 15px;
+}
+
+
+
+
+
+.conteinerbanner2 {
+  width: 100%;
+  height: 700px;
+}
+
+.conteinerbanner2 img{
+  width: 100%;
+  height: 100%;
+}
+
+footer{
+
+  background-color: var(--cor4);
+  width: 100%;
+  height: 100px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+footer h1 {
+  color: var(--cor5);
+  font-size: 18px;
+}
+
+@media (max-width: 1200px) {
+
+  .conteinerbanner2 {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .conteinerbanner2 img{
+    width: 100%;
+    height: 100%;
+  }
+  
+}
+
+@media (max-width: 800px) {
+
+  .conteinerbanner2 {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .conteinerbanner2 img{
+    width: 100%;
+    height: 100%;
+  }
+  
+}
+
+@media (max-width: 600px) {
+
+  .conteinerbanner2 {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .conteinerbanner2 img{
+    width: 100%;
+    height: 100%;
+  }
+  
+}
+
+@media (max-width: 500px) {
+
+  .conteinerbanner2 {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .conteinerbanner2 img{
+    width: 100%;
+    height: 100%;
+  }
+  
+}
+
+.prp {
+  margin-left: 20%;
+  
+}
+
+.linha1 {
+  background-color: var(--cor4);
+  width: 50px;
+  height: 3px;
+  animation: linha01 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes linha01 {
+  0% {
+    margin-left: 0%;
+    background-color: var(--cor4);
+  }
+
+  100% {
+    margin-left: calc(100% - 50px);
+    background-color: var(--cor4);
+  }
+}
+
+.linha2 {
+  background-color: var(--cor4);
+  width: 500px;
+  height: 3px;
+  animation: linha02 3s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes linha02 {
+  0% {
+    margin-left: calc(100% - 500px);
+    background-color: var(--cor4);
+  }
+
+  100% {
+    margin-left: 0%;
+    background-color: var(--cor4);
+  }
+}
